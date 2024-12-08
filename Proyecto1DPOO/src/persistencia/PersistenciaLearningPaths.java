@@ -5,21 +5,19 @@ import componentes.LearningPath;
 import controladores.ControladorActividad;
 import java.io.File;
 import java.nio.file.Files;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import controladores.ControladorLearningPath;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class PersistenciaLearningPaths {
 

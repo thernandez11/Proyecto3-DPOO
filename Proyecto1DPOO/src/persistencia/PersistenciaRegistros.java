@@ -1,7 +1,6 @@
 package persistencia;
 
 import componentes.RegistroActividad;
-import controladores.ControladorActividad;
 import controladores.ControladorRegistros;
 import java.io.File;
 import java.io.IOException;
@@ -9,14 +8,15 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.time.LocalDateTime;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import componentes.RegistroLearningPath;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class PersistenciaRegistros {
 

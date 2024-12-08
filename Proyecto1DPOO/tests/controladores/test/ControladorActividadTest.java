@@ -6,14 +6,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
 import componentes.Actividad;
-import componentes.Opcion;
 import componentes.PreguntaAbierta;
 import componentes.PreguntaMultiple;
 import componentes.PreguntaVerdaderoFalso;

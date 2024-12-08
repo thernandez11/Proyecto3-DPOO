@@ -6,10 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import controladores.ControladorProfesor;
-import componentes.Profesor;
-
 import java.io.*;
-import java.util.Collection;
 
 class ControladorProfesorTest {
 
