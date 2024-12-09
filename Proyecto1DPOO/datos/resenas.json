@@ -12,5 +12,12 @@
     "rating": 2,
     "rolAutor": "Profesor",
     "opinion": "tremenda"
+  },
+  {
+    "idActividad": 1,
+    "loginAutor": "a",
+    "rating": 3,
+    "rolAutor": "Profesor",
+    "opinion": "a"
   }
 ]

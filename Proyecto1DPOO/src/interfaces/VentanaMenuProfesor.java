@@ -24,6 +24,8 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
 	private VentanaVerActividades ventanaVerActividades;
 	private VentanaVerResenas ventanaVerResenas;
 	
+	private VentanaCrearResena ventanaCrearResena;
+	
 	public VentanaMenuProfesor(String login) throws IOException {
 		
 		this.loginActual = login;
@@ -72,7 +74,7 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         		mostrarVentanaCrearActividad(loginActual, AC);
         		break;
         	case "Crear reseña":
-        		mostrarVentanaCrearResena(loginActual, RC);
+        		mostrarVentanaCrearResena(loginActual, RC, AC);
         		break;
         	case "Editar learning path":
         		mostrarVentanaEditarLearningPath(loginActual, LPC);
@@ -110,7 +112,7 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         }
 	}
 
-	private void mostrarVentanaCrearLearningPath(String loginActual2, ControladorLearningPath lPC2) {
+	private void mostrarVentanaCrearLearningPath(String login, ControladorLearningPath controlador) {
 		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
         {
 			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
@@ -118,7 +120,7 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         }
 	}
 
-	private void mostrarVentanaCrearActividad(String loginActual2, ControladorActividad aC2) {
+	private void mostrarVentanaCrearActividad(String login, ControladorActividad controlador) {
 		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
         {
 			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
@@ -126,7 +128,15 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         }
 	}
 
-	private void mostrarVentanaCrearResena(String loginActual2, ControladorResena rC2) {
+	private void mostrarVentanaCrearResena(String login, ControladorResena controladorResena, ControladorActividad controladorActividad) {
+		if( ventanaCrearResena == null || !ventanaCrearResena.isVisible( ) )
+        {
+			ventanaCrearResena = new VentanaCrearResena(login, "Profesor", controladorResena, controladorActividad);
+			ventanaCrearResena.setVisible( true );
+        }
+	}
+
+	private void mostrarVentanaEditarLearningPath(String login, ControladorLearningPath controlador) {
 		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
         {
 			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
@@ -134,15 +144,7 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         }
 	}
 
-	private void mostrarVentanaEditarLearningPath(String loginActual2, ControladorLearningPath lPC2) {
-		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
-        {
-			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
-			ventanaVerLearningPaths.setVisible( true );
-        }
-	}
-
-	private void mostrarVentanaEditarActividad(String loginActual2, ControladorActividad aC2) {
+	private void mostrarVentanaEditarActividad(String login, ControladorActividad controlador) {
 		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
         {
 			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
