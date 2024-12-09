@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+[{
+  "idActividad": 2,
+  "loginAutor": "testUser",
+  "rating": 1,
+  "rolAutor": "Estudiante",
+  "opinion": "Es completamente genial"
+}]
+=======
 [
   {
     "idActividad": 1,
@@ -21,3 +30,4 @@
     "opinion": "a"
   }
 ]
+>>>>>>> branch 'main' of https://github.com/thernandez11/Proyecto3-DPOO/

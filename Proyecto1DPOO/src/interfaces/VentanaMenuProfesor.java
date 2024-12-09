@@ -13,7 +13,7 @@ import controladores.ControladorLearningPath;
 import controladores.ControladorResena;
 
 @SuppressWarnings("serial")
-public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
+public class VentanaMenuProfesor extends JFrame implements ActionListener  {
 	
 	private ControladorActividad AC;
 	private ControladorLearningPath LPC;
@@ -24,7 +24,12 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
 	private VentanaVerActividades ventanaVerActividades;
 	private VentanaVerResenas ventanaVerResenas;
 	
+	private VentanaCrearLearningPath ventanaCrearLearningPath;
+	private VentanaCrearActividad ventanaCrearActividad;
 	private VentanaCrearResena ventanaCrearResena;
+	
+	private VentanaEditarLearningPath ventanaEditarLearningPaths;
+	private VentanaEditarActividad ventanaEditarActividad;
 	
 	public VentanaMenuProfesor(String login) throws IOException {
 		
@@ -68,7 +73,7 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         		mostrarVentanaVerResenas(loginActual, RC);
         		break;
         	case "Crear learning path":
-        		mostrarVentanaCrearLearningPath(loginActual, LPC);
+        		mostrarVentanaCrearLearningPath(loginActual, LPC, AC);
         		break;
         	case "Crear actividad":
         		mostrarVentanaCrearActividad(loginActual, AC);
@@ -112,19 +117,19 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         }
 	}
 
-	private void mostrarVentanaCrearLearningPath(String login, ControladorLearningPath controlador) {
-		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
+	private void mostrarVentanaCrearLearningPath(String login, ControladorLearningPath controladorLearningPath, ControladorActividad controladorActividad) {
+		if( ventanaCrearLearningPath == null || !ventanaCrearLearningPath.isVisible( ) )
         {
-			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
-			ventanaVerLearningPaths.setVisible( true );
+			ventanaCrearLearningPath = new VentanaCrearLearningPath(login, controladorLearningPath, controladorActividad);
+			ventanaCrearLearningPath.setVisible( true );
         }
 	}
 
 	private void mostrarVentanaCrearActividad(String login, ControladorActividad controlador) {
-		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
+		if( ventanaCrearActividad == null || !ventanaCrearActividad.isVisible( ) )
         {
-			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
-			ventanaVerLearningPaths.setVisible( true );
+			ventanaCrearActividad = new VentanaCrearActividad(login, controlador);
+			ventanaCrearActividad.setVisible( true );
         }
 	}
 
@@ -136,19 +141,19 @@ public class VentanaMenuProfesor  extends JFrame implements ActionListener  {
         }
 	}
 
-	private void mostrarVentanaEditarLearningPath(String login, ControladorLearningPath controlador) {
-		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
+	private void mostrarVentanaEditarLearningPath(String login, ControladorLearningPath controladorLearningPath, ControladorActividad controladorActividad) {
+		if( ventanaEditarLearningPaths == null || !ventanaEditarLearningPaths.isVisible( ) )
         {
-			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
-			ventanaVerLearningPaths.setVisible( true );
+			ventanaEditarLearningPaths = new VentanaEditarLearningPaths(login, controladorLearningPath, controladorActividad);
+			ventanaEditarLearningPaths.setVisible( true );
         }
 	}
 
 	private void mostrarVentanaEditarActividad(String login, ControladorActividad controlador) {
-		if( ventanaVerLearningPaths == null || !ventanaVerLearningPaths.isVisible( ) )
+		if( ventanaEditarActividad == null || !ventanaEditarActividad.isVisible( ) )
         {
-			ventanaVerLearningPaths = new VentanaVerLearningPaths(login, controlador);
-			ventanaVerLearningPaths.setVisible( true );
+			ventanaEditarActividad = new VentanaEditarActividad(login, controlador);
+			ventanaEditarActividad.setVisible( true );
         }
 	}
 		

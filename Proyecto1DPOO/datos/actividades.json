@@ -1,20 +1,115 @@
-[{
-  "descripcion": "a",
-  "tipo": "Tarea",
-  "nivelDificultad": "1",
-  "notaMinima": -1,
-  "actividadesSiguientes": [],
-  "url": "",
-  "actividadesPrevias": [],
-  "loginCreador": "a",
-  "objetivos": [
-    "a",
-    "a",
-    "a",
-    "a"
-  ],
-  "fechaLimite": "",
-  "duracion": 12,
-  "preguntas": [],
-  "id": 1
-}]
+[
+  {
+    "descripcion": "a",
+    "tipo": "Tarea",
+    "nivelDificultad": "1",
+    "notaMinima": -1,
+    "actividadesSiguientes": [],
+    "url": "",
+    "actividadesPrevias": [],
+    "loginCreador": "a",
+    "objetivos": [
+      "a",
+      "a",
+      "a",
+      "a"
+    ],
+    "fechaLimite": "",
+    "duracion": 12,
+    "preguntas": [],
+    "id": 1
+  },
+  {
+    "descripcion": "dsad",
+    "tipo": "Tarea",
+    "nivelDificultad": "as",
+    "notaMinima": -1,
+    "actividadesSiguientes": [],
+    "url": "",
+    "actividadesPrevias": [],
+    "loginCreador": "a",
+    "objetivos": ["dsada"],
+    "fechaLimite": "",
+    "duracion": 33,
+    "preguntas": [],
+    "id": 2
+  },
+  {
+    "descripcion": "dsada",
+    "tipo": "Tarea",
+    "nivelDificultad": "sdas",
+    "notaMinima": -1,
+    "actividadesSiguientes": [],
+    "url": "",
+    "actividadesPrevias": [],
+    "loginCreador": "a",
+    "objetivos": ["dsadas"],
+    "fechaLimite": "",
+    "duracion": 321,
+    "preguntas": [],
+    "id": 3
+  },
+  {
+    "descripcion": "13213",
+    "tipo": "Tarea",
+    "nivelDificultad": "31231",
+    "notaMinima": -1,
+    "actividadesSiguientes": [],
+    "url": "",
+    "actividadesPrevias": [],
+    "loginCreador": "a",
+    "objetivos": ["312312"],
+    "fechaLimite": "",
+    "duracion": 32131,
+    "preguntas": [],
+    "id": 4
+  },
+  {
+    "descripcion": "0",
+    "tipo": "Tarea",
+    "nivelDificultad": "0",
+    "notaMinima": -1,
+    "actividadesSiguientes": [],
+    "url": "",
+    "actividadesPrevias": [],
+    "loginCreador": "a",
+    "objetivos": ["0"],
+    "fechaLimite": "",
+    "duracion": 0,
+    "preguntas": [],
+    "id": 5
+  },
+  {
+    "descripcion": "123",
+    "tipo": "Tarea",
+    "nivelDificultad": "3213",
+    "notaMinima": -1,
+    "actividadesSiguientes": [],
+    "url": "",
+    "actividadesPrevias": [],
+    "loginCreador": "a",
+    "objetivos": ["3213"],
+    "fechaLimite": "",
+    "duracion": 0,
+    "preguntas": [],
+    "id": 6
+  },
+  {
+    "descripcion": "a",
+    "tipo": "Tarea",
+    "nivelDificultad": "Muy baja",
+    "notaMinima": -1,
+    "actividadesSiguientes": [
+      5,
+      6
+    ],
+    "url": "",
+    "actividadesPrevias": [],
+    "loginCreador": "a",
+    "objetivos": ["a"],
+    "fechaLimite": "",
+    "duracion": 5,
+    "preguntas": [],
+    "id": 7
+  }
+]

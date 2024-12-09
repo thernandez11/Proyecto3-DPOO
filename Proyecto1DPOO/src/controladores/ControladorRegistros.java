@@ -24,14 +24,14 @@ public class ControladorRegistros {
 		LocalDateTime fecha = LocalDateTime.now();
 		RegistroLearningPath rlp = new RegistroLearningPath(loginActual, fecha);
 		int idLp = lp.getId();
-		if (getRegistrosLp().containsKey(idLp)) {
-			ArrayList<RegistroLearningPath> rlps = getRegistrosLp().get(idLp);
-			rlps.add(rlp);
-		} else {
-			ArrayList<RegistroLearningPath> rlps = new ArrayList<>();
-			rlps.add(rlp);
-			getRegistrosLp().put(idLp, rlps);
-		}
+		
+		ArrayList<RegistroLearningPath> rlps = getRegistrosLp().get(idLp);
+	    if (rlps == null) {
+	        rlps = new ArrayList<>();
+	        getRegistrosLp().put(idLp, rlps);
+	    }
+
+	    rlps.add(rlp);
 	}
 	public void crearRegistrosActividad(String loginActual, LearningPath lp) {
 		ArrayList<RegistroActividad> registros = new ArrayList<>();
@@ -67,14 +67,20 @@ public class ControladorRegistros {
 	
 	//Consultar registros especificos
 	public RegistroLearningPath getRegistroLp(String loginActual, int idLp) {
-		ArrayList<RegistroLearningPath> rlps = getRegistrosLp().get(idLp);
-		for(RegistroLearningPath rlp : rlps) {
-			if (rlp.getLoginEstudiante().equals(loginActual)) {
-				return rlp;
-			}
-		}
-		return null;
+	    ArrayList<RegistroLearningPath> rlps = getRegistrosLp().get(idLp);
+	    if (rlps == null) {
+	        return null; // No records for this Learning Path ID
+	    }
+
+	    for (RegistroLearningPath rlp : rlps) {
+	        if (rlp.getLoginEstudiante().equals(loginActual)) {
+	            return rlp;
+	        }
+	    }
+
+	    return null; // No record found for the student
 	}
+
 	public RegistroActividad getRegistroActividad(String loginActual, int idLp, int idA) {
 		RegistroLearningPath rlp = getRegistroLp(loginActual, idLp);
 		List<RegistroActividad> ras = rlp.getRegistrosA();

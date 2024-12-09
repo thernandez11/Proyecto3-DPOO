@@ -1,15 +1,141 @@
-[{
-  "descripcionGeneral": "DESCRIPCION",
-  "loginCreador": "admin",
-  "fechaModificacion": "2024-11-26T18:05:42.771264482",
-  "nivelDificultad": "3",
-  "titulo": "LP",
-  "duracion": 20,
-  "fechaCreacion": "2024-11-26T18:05:42.771264482",
-  "id": 1,
-  "actividades": [{
-    "obligatoria": true,
-    "id": 1
-  }],
-  "version": 0
-}]
+[
+  {
+    "descripcionGeneral": "DESCRIPCION",
+    "loginCreador": "admin",
+    "fechaModificacion": "2024-11-26T18:05:42.771264482",
+    "nivelDificultad": "3",
+    "titulo": "LP",
+    "duracion": 20,
+    "fechaCreacion": "2024-11-26T18:05:42.771264482",
+    "id": 1,
+    "actividades": [{
+      "obligatoria": true,
+      "id": 1
+    }],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "descio",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T21:21:17.335807500",
+    "nivelDificultad": "Alta",
+    "titulo": "learningpath",
+    "duracion": 60,
+    "fechaCreacion": "2024-12-08T21:21:17.335807500",
+    "id": 2,
+    "actividades": [],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "dsadsa",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T21:23:02.250700700",
+    "nivelDificultad": "Muy baja",
+    "titulo": "dsad",
+    "duracion": 5,
+    "fechaCreacion": "2024-12-08T21:23:02.250700700",
+    "id": 3,
+    "actividades": [],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "dsa",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T22:13:31.574933100",
+    "nivelDificultad": "Muy baja",
+    "titulo": "dsa",
+    "duracion": 5,
+    "fechaCreacion": "2024-12-08T22:13:31.574933100",
+    "id": 4,
+    "actividades": [{
+      "obligatoria": false,
+      "id": 6
+    }],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "1",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T22:15:26.554752700",
+    "nivelDificultad": "Muy baja",
+    "titulo": "21",
+    "duracion": 5,
+    "fechaCreacion": "2024-12-08T22:15:26.554752700",
+    "id": 5,
+    "actividades": [{
+      "obligatoria": true,
+      "id": 6
+    }],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "312",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T22:16:28.819551600",
+    "nivelDificultad": "Muy baja",
+    "titulo": "321",
+    "duracion": 5,
+    "fechaCreacion": "2024-12-08T22:16:28.819551600",
+    "id": 6,
+    "actividades": [{
+      "obligatoria": true,
+      "id": 1
+    }],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "312",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T22:37:35.038936600",
+    "nivelDificultad": "Muy baja",
+    "titulo": "321",
+    "duracion": 5,
+    "fechaCreacion": "2024-12-08T22:37:35.038936600",
+    "id": 7,
+    "actividades": [{
+      "obligatoria": false,
+      "id": 2
+    }],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "dsa",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T22:42:16.737530600",
+    "nivelDificultad": "Muy baja",
+    "titulo": "das",
+    "duracion": 5,
+    "fechaCreacion": "2024-12-08T22:42:16.737530600",
+    "id": 8,
+    "actividades": [{
+      "obligatoria": true,
+      "id": 4
+    }],
+    "version": 0
+  },
+  {
+    "descripcionGeneral": "dsada",
+    "loginCreador": "a",
+    "fechaModificacion": "2024-12-08T22:45:30.543261900",
+    "nivelDificultad": "asda",
+    "titulo": "dsad",
+    "duracion": 32,
+    "fechaCreacion": "2024-12-08T22:45:30.543261900",
+    "id": 9,
+    "actividades": [
+      {
+        "obligatoria": true,
+        "id": 2
+      },
+      {
+        "obligatoria": true,
+        "id": 2
+      },
+      {
+        "obligatoria": true,
+        "id": 2
+      }
+    ],
+    "version": 0
+  }
+]

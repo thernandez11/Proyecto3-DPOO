@@ -20,11 +20,9 @@ import persistencia.PersistenciaActividades;
 public class ControladorActividad {
 	
 	public HashMap<Integer, Actividad> actividades;
-	private PersistenciaActividades persistenciaActividades;
-	
 	public ControladorActividad() {
 	    this.actividades = new HashMap<>();
-		this.persistenciaActividades = new PersistenciaActividades();
+		new PersistenciaActividades();
 	}
 	
 	//Consultar informacion actividades
