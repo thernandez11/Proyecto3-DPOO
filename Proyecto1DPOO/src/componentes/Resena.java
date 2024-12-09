@@ -16,6 +16,13 @@ public class Resena {
 		this.loginAutor = loginAutor;
 		this.rolAutor = rolAutor;
 	}
+	
+	@Override
+    public String toString( )
+    {
+     // TODO completar para que retorne el nombre del restaurante
+        return String.valueOf(idActividad);
+    }
 
 	//Getters y Setters
 	public int getIdActividad() {

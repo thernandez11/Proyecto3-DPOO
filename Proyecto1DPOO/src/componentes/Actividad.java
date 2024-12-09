@@ -27,6 +27,13 @@ public class Actividad {
 		this.loginCreador = loginCreador;
 	}
 	
+    @Override
+    public String toString( )
+    {
+     // TODO completar para que retorne el nombre del restaurante
+        return String.valueOf(id);
+    }
+	
 	//Getters y Setters
 	public String getLoginCreador() {
 		return loginCreador;

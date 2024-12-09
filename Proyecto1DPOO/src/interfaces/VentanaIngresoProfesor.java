@@ -86,7 +86,7 @@ public class VentanaIngresoProfesor extends JFrame implements ActionListener {
 	private void mostrarVentanaMenu(String strUser) throws IOException {
 		if( ventanaMenu == null || !ventanaMenu.isVisible( ) )
         {
-			ventanaMenu = new VentanaMenuProfesor();
+			ventanaMenu = new VentanaMenuProfesor(strUser);
 			ventanaMenu.setVisible( true );
         }
 	}

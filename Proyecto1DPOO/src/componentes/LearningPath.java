@@ -24,6 +24,13 @@ public class LearningPath {
 		this.fechaCreacion = fechaCreacion;
 		this.fechaModificacion = fechaModificacion;
 	}
+	
+    @Override
+    public String toString( )
+    {
+     // TODO completar para que retorne el nombre del restaurante
+        return titulo;
+    }
 
 	//Getters y Setters
 	public String getTitulo() {

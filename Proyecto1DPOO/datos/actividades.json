@@ -1,1 +1,20 @@
-[]
+[{
+  "descripcion": "a",
+  "tipo": "Tarea",
+  "nivelDificultad": "1",
+  "notaMinima": -1,
+  "actividadesSiguientes": [],
+  "url": "",
+  "actividadesPrevias": [],
+  "loginCreador": "a",
+  "objetivos": [
+    "a",
+    "a",
+    "a",
+    "a"
+  ],
+  "fechaLimite": "",
+  "duracion": 12,
+  "preguntas": [],
+  "id": 1
+}]

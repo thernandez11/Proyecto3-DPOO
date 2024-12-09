@@ -24,6 +24,10 @@
     "login": "admin"
   },
   {
+    "password": "y",
+    "login": "y"
+  },
+  {
     "password": "profesor",
     "login": "profesor"
   }
