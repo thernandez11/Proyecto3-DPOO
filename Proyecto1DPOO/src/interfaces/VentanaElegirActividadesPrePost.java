@@ -31,6 +31,7 @@ public class VentanaElegirActividadesPrePost extends JFrame implements ActionLis
 	List<Actividad> actividadesPrevias;
 	List<Actividad> actividadesSeguimiento;
 	VentanaCrearActividad ventanaCrearActividad;
+	VentanaEditarActividad ventanaEditarActividad;
 	
 	private JList<Actividad> listaActividades;
 	private DefaultListModel<Actividad> dataModel;
@@ -89,8 +90,55 @@ public class VentanaElegirActividadesPrePost extends JFrame implements ActionLis
 		this.setSize(600, 600);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
-	
-    public void actualizarActividades( Collection<Actividad> actividades )
+
+	public VentanaElegirActividadesPrePost(String login, ControladorActividad controlador, boolean previo, List<Actividad> actividadesPrevias, List<Actividad> actividadesSeguimiento, VentanaEditarActividad ventanaEditarActividad){
+		this.loginActual = login;
+		this.controlador = controlador;
+		this.actividadesPrevias = actividadesPrevias;
+		this.actividadesSeguimiento = actividadesSeguimiento;
+		this.ventanaEditarActividad = ventanaEditarActividad;
+		
+		this.setLayout(new BorderLayout());
+		dataModel = new DefaultListModel<>( );
+		listaActividades = new JList<>( dataModel );
+		listaActividades.setSelectionMode( ListSelectionModel.MULTIPLE_INTERVAL_SELECTION );
+		listaActividades.addListSelectionListener( this );
+		Collection<Actividad> actividades = controlador.getActividades();
+		
+		JScrollPane scroll = new JScrollPane( listaActividades );
+        scroll.setHorizontalScrollBarPolicy( JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED );
+        scroll.setVerticalScrollBarPolicy( JScrollPane.VERTICAL_SCROLLBAR_ALWAYS );
+        this.add(scroll, BorderLayout.CENTER);
+        actualizarActividades(actividades);
+        
+        JPanel botones = new JPanel();
+        botones.setLayout(new FlowLayout());
+        JButton butCerrar = new JButton("Cerrar");
+        butCerrar.setActionCommand("Cerrar");
+        butCerrar.addActionListener(this);
+        botones.add(butCerrar);
+        JButton butElegir = new JButton("Elegir");
+        butElegir.setActionCommand("Elegir");
+        butElegir.addActionListener(this);
+        botones.add(butElegir);
+        this.add(botones, BorderLayout.NORTH);
+        
+        JPanel detalles = new JPanel();
+        detalles.setLayout(new GridLayout(7, 1));
+        detalles.add(tipo);
+        detalles.add(descripcion);
+        detalles.add(objetivos);
+        detalles.add(nivelDificultad);
+        detalles.add(duracion);
+        detalles.add(id);
+        detalles.add(creador);
+        this.add(detalles, BorderLayout.SOUTH);
+        
+		this.setSize(600, 600);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	}
+
+	public void actualizarActividades( Collection<Actividad> actividades )
     {
         List<Actividad> nuevasActividades = new ArrayList<Actividad>( );
         for( Actividad a : actividades )
@@ -132,8 +180,14 @@ public class VentanaElegirActividadesPrePost extends JFrame implements ActionLis
         			actividadesSeguimiento1.add(a);
         		}
         	}
-        	ventanaCrearActividad.actualizarActividadesPrevias(actividadesPrevias1);
-        	ventanaCrearActividad.actualizarActividadesSeguimiento(actividadesSeguimiento1);
+        	if (ventanaCrearActividad != null) {
+        		ventanaCrearActividad.actualizarActividadesPrevias(actividadesPrevias1);
+            	ventanaCrearActividad.actualizarActividadesSeguimiento(actividadesSeguimiento1);
+        	} else {
+        		ventanaEditarActividad.actualizarActividadesPrevias(actividadesPrevias1);
+            	ventanaEditarActividad.actualizarActividadesSeguimiento(actividadesSeguimiento1);
+        	}
+        	
         	dispose();
         }
 	}

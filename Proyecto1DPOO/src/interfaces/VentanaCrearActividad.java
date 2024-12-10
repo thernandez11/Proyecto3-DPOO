@@ -35,6 +35,12 @@ public class VentanaCrearActividad extends JFrame implements ActionListener {
 	List<Actividad> actividadesSeguimiento;
 	
 	VentanaElegirActividadesPrePost ventanaElegirActividades;
+	VentanaNotaMinima ventanaNotaMinima;
+	VentanaQuizMultiple ventanaQuizMultiple;
+	VentanaVerdaderoFalso ventanaVerdaderoFalso;
+	VentanaPreguntas ventanaPreguntas;
+	VentanaURL ventanaURL;
+	
 	
 	public VentanaCrearActividad(String login , ControladorActividad controladorActividad) {
 		
@@ -141,26 +147,27 @@ public class VentanaCrearActividad extends JFrame implements ActionListener {
         		}
         		controladorActividad.editarActividadesPrevias(id, idsPrevias);
         		controladorActividad.editarActividadesSeguimiento(id, idsSeguimiento);
+        		dispose();
         		switch (tipo.getSelectedItem().toString()) {
         			case "Tarea":
         				break;
         			case "Encuesta":
-        				mostrarVentanaPreguntas();
+        				mostrarVentanaPreguntas(loginActual, controladorActividad, id);
         				break;
         			case "Examen":
-        				mostrarVentanaPreguntas();
-        				mostrarVentanaNotaMinima();
+        				mostrarVentanaPreguntas(loginActual, controladorActividad, id);
+        				mostrarVentanaNotaMinima(loginActual, controladorActividad, id);
         				break;
         			case "Quiz opcion multiple":
-        				mostrarVentanaQuizMultiple();
-        				mostrarVentanaNotaMinima();
+        				mostrarVentanaQuizMultiple(loginActual, controladorActividad, id);
+        				mostrarVentanaNotaMinima(loginActual, controladorActividad, id);
         				break;
         			case "Quiz verdadero falso":
-        				mostrarVentanaVerdaderoFalso();
-        				mostrarVentanaNotaMinima();
+        				mostrarVentanaVerdaderoFalso(loginActual, controladorActividad, id);
+        				mostrarVentanaNotaMinima(loginActual, controladorActividad, id);
         				break;
         			case "Recurso educativo":
-        				MostrarVentanaURL();
+        				MostrarVentanaURL(loginActual, controladorActividad, id);
         				break;
         		}
         		try {
@@ -168,13 +175,51 @@ public class VentanaCrearActividad extends JFrame implements ActionListener {
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
-        		JOptionPane.showMessageDialog(this, "Ha creado una actividad exitosamente!", "Exito", JOptionPane.INFORMATION_MESSAGE);
-        		dispose();
         	}
         } else if ( comando.equals("Elegir1") ) {
         	mostrarVentanaElegirActividades( true );
         } else if ( comando.equals("Elegir2") ) {
         	mostrarVentanaElegirActividades( false );
+        }
+	}
+
+	private void mostrarVentanaPreguntas(String login, ControladorActividad controlador, int id) {
+		if( ventanaPreguntas == null || !ventanaPreguntas.isVisible( ) )
+        {
+			ventanaPreguntas = new VentanaPreguntas(login, controlador, id);
+			ventanaPreguntas.setVisible( true );
+        }
+	}
+
+	private void mostrarVentanaQuizMultiple(String login, ControladorActividad controlador, int id) {
+		if( ventanaQuizMultiple == null || !ventanaQuizMultiple.isVisible( ) )
+        {
+			ventanaQuizMultiple = new VentanaQuizMultiple(login, controlador, id);
+			ventanaQuizMultiple.setVisible( true );
+        }
+	}
+
+	private void mostrarVentanaVerdaderoFalso(String login, ControladorActividad controlador, int id) {
+		if( ventanaVerdaderoFalso == null || !ventanaVerdaderoFalso.isVisible( ) )
+        {
+			ventanaVerdaderoFalso = new VentanaVerdaderoFalso(login, controlador, id);
+			ventanaVerdaderoFalso.setVisible( true );
+        }
+	}
+
+	private void mostrarVentanaNotaMinima(String login, ControladorActividad controlador, int id) {
+		if( ventanaNotaMinima == null || !ventanaNotaMinima.isVisible( ) )
+        {
+			ventanaNotaMinima = new VentanaNotaMinima(login, controlador, id);
+			ventanaNotaMinima.setVisible( true );
+        }
+	}
+
+	private void MostrarVentanaURL(String login, ControladorActividad controlador, int id) {
+		if( ventanaURL == null || !ventanaURL.isVisible( ) )
+        {
+			ventanaURL = new VentanaURL(login, controlador, id);
+			ventanaURL.setVisible( true );
         }
 	}
 

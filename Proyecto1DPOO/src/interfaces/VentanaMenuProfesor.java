@@ -28,8 +28,8 @@ public class VentanaMenuProfesor extends JFrame implements ActionListener  {
 	private VentanaCrearActividad ventanaCrearActividad;
 	private VentanaCrearResena ventanaCrearResena;
 	
-	private VentanaEditarLearningPath ventanaEditarLearningPaths;
-	private VentanaEditarActividad ventanaEditarActividad;
+	private VentanaEditarLearningPathInicio ventanaEditarLearningPathsInicio;
+	private VentanaEditarActividadInicio ventanaEditarActividadInicio;
 	
 	public VentanaMenuProfesor(String login) throws IOException {
 		
@@ -82,7 +82,7 @@ public class VentanaMenuProfesor extends JFrame implements ActionListener  {
         		mostrarVentanaCrearResena(loginActual, RC, AC);
         		break;
         	case "Editar learning path":
-        		mostrarVentanaEditarLearningPath(loginActual, LPC);
+        		mostrarVentanaEditarLearningPath(loginActual, LPC, AC);
         		break;
         	case "Editar actividad":
         		mostrarVentanaEditarActividad(loginActual, AC);
@@ -142,18 +142,18 @@ public class VentanaMenuProfesor extends JFrame implements ActionListener  {
 	}
 
 	private void mostrarVentanaEditarLearningPath(String login, ControladorLearningPath controladorLearningPath, ControladorActividad controladorActividad) {
-		if( ventanaEditarLearningPaths == null || !ventanaEditarLearningPaths.isVisible( ) )
+		if( ventanaEditarLearningPathsInicio == null || !ventanaEditarLearningPathsInicio.isVisible( ) )
         {
-			ventanaEditarLearningPaths = new VentanaEditarLearningPaths(login, controladorLearningPath, controladorActividad);
-			ventanaEditarLearningPaths.setVisible( true );
+			ventanaEditarLearningPathsInicio = new VentanaEditarLearningPathInicio(login, controladorLearningPath, controladorActividad);
+			ventanaEditarLearningPathsInicio.setVisible( true );
         }
 	}
 
 	private void mostrarVentanaEditarActividad(String login, ControladorActividad controlador) {
-		if( ventanaEditarActividad == null || !ventanaEditarActividad.isVisible( ) )
+		if( ventanaEditarActividadInicio == null || !ventanaEditarActividadInicio.isVisible( ) )
         {
-			ventanaEditarActividad = new VentanaEditarActividad(login, controlador);
-			ventanaEditarActividad.setVisible( true );
+			ventanaEditarActividadInicio = new VentanaEditarActividadInicio(login, controlador);
+			ventanaEditarActividadInicio.setVisible( true );
         }
 	}
 		

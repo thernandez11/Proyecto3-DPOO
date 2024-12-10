@@ -23,6 +23,7 @@ import controladores.ControladorLearningPath;
 public class VentanaEditarLearningPath extends JFrame implements ActionListener {
 
 	String loginActual;
+	int id;
 	ControladorLearningPath controladorLearningPath;
 	ControladorActividad controladorActividad;
 	
@@ -34,9 +35,10 @@ public class VentanaEditarLearningPath extends JFrame implements ActionListener 
 	
 	VentanaElegirActividades ventanaElegirActividades;
 	
-	public VentanaEditarLearningPath(String login, ControladorLearningPath controladorLearningPath, ControladorActividad controladorActividad) {
+	public VentanaEditarLearningPath(String login, ControladorLearningPath controladorLearningPath, ControladorActividad controladorActividad, int id) {
 		
 		this.loginActual = login;
+		this.id = id;
 		this.controladorLearningPath = controladorLearningPath;
 		this.controladorActividad = controladorActividad;
 		this.actividades = new HashMap<>();
